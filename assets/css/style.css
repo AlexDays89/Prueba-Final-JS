@@ -1,0 +1,26 @@
+.contenedor {
+    background-color: black;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+.contenedor h1 {
+    color: white;
+    text-align: center;
+    border: solid 1px white;
+}
+
+.conversor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: gray;
+    gap: 5px;
+}
+
+.conversor h2, h3, p{
+    color: white;
+    text-align: center;
+}
