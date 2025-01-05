@@ -19,8 +19,9 @@ async function conversormoneda() {
       const data = await res.json();
       dataGlobal = data;
 
+      const excluir = ["imacec", "ipc", "ivp", "tasa_desempleo", "tpm", "libra_cobre"];
       const monedasRelevantes = Object.keys(data)
-      .filter(moneda => data[moneda].codigo && data[moneda].nombre)
+      .filter(moneda => data[moneda].codigo && data[moneda].nombre && !excluir.includes(moneda))
       .map(moneda => ({
           codigo: data[moneda].codigo,
           nombre: data[moneda].nombre,
